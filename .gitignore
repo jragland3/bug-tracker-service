@@ -5,7 +5,4 @@ node_modules
 .env
 .env.test
 *.db
-<<<<<<< HEAD
-=======
 *.db-journal
->>>>>>> fb984e9d1f1eb2658874b1563b6fd6d7e68710a8
