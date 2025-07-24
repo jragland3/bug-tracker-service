@@ -25,6 +25,7 @@ describe('Bug API Endpoints', () => {
     expect(res.body.length).toBeGreaterThan(0);
   });
 
+  // POST
   it("POST /api/bugs -> should create a new bug", async () => {
     const res = await request(app).post("/api/bugs").send({
       title: 'Test bug',
@@ -39,6 +40,7 @@ describe('Bug API Endpoints', () => {
     bugId = res.body.id;
   });
 
+  // DELETE
   it("DELETE /api/bugs/:id -> should delete the specified bug", async () => {
     const bug = await prisma.bug.create({
       data: {
@@ -55,6 +57,7 @@ describe('Bug API Endpoints', () => {
     expect(deleted).toBeNull();
   });
 
+  // PUT
   it("PUT /api/bugs/:id -> should update the specified bug", async () => {
     // Create bug
     const bug = await prisma.bug.create({
