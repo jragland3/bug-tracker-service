@@ -57,7 +57,7 @@ describe('Bug API Endpoints', () => {
     expect(deleted).toBeNull();
   });
 
-  // PUT
+  // PUT 
   it("PUT /api/bugs/:id -> should update the specified bug", async () => {
     // Create bug
     const bug = await prisma.bug.create({
